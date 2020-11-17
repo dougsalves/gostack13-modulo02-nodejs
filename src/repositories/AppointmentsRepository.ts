@@ -6,7 +6,7 @@ class AppointmentsRepository extends Repository<Appointments> {
   public async findByDate(date: Date): Promise<Appointments | null> {
     const findAppointment = await this.findOne({
       where: { date },
-    })
+    });
 
     return findAppointment || null;
   }
